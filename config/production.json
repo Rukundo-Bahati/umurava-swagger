@@ -1,0 +1,6 @@
+{
+    "MONGO_URI": "mongodb+srv://rukundob39:RBS2021GSSA@umurava.l73hd.mongodb.net/?retryWrites=true&w=majority&appName=Umurava",
+    "PORT": 5000,
+    "JWTKEY": "c4ntGu355"
+  }
+  
