@@ -24,7 +24,6 @@ const swaggerOptions = {
       description: 'API documentation for the backend services',
     },
   },
-  // Combine docs from different routes here
   apis: ['./swaggerDocs.js'], // Pointing to the single file
 };
 
@@ -46,8 +45,4 @@ app.use('/api/auth', authRoutes);
 app.use("/api/challenges", challengeRoutes);
 
 // Connect to the database and start the server
-connection.then(() => {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}).catch((err) => {
-  console.error('Database connection failed:', err.message);
-});
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -2,17 +2,23 @@ import mongoose from "mongoose";
 import c from "config";
 
 const CONNECTION = c.get("MONGO_URI") || "mongodb://localhost/Umurava";
-export default mongoose
-  .connect(CONNECTION,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    autoReconnect: true,
-    reconnectTries: Number.MAX_VALUE,
-    reconnectInterval: 500,
-    connectTimeoutMS: 30000,
-  })
-  .then(() => console.log(`Connected Successfully Umurava DB`))
-  .catch((error) => console.log(`${error} did not connect`));
 
-mongoose.set('bufferCommands', false);
+const connectDB = async () => {
+  try {
+    await mongoose.connect(CONNECTION, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      autoReconnect: true,
+      reconnectTries: Number.MAX_VALUE,
+      reconnectInterval: 500,
+      connectTimeoutMS: 30000,
+    });
+    console.log(`Connected Successfully to Umurava DB`);
+  } catch (error) {
+    console.log(`Error: ${error.message}`);
+    process.exit(1); // Exit the process if connection fails
+  }
+};
 
+// Call the connection function
+connectDB();
