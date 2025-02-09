@@ -31,7 +31,9 @@ const swaggerOptions = {
 const swaggerDocsDefinition = swaggerJSDoc(swaggerOptions);
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://umurava-combined-12m3.vercel.app/'
+}));
 app.use(helmet());
 app.use(express.json());
 
