@@ -1,5 +1,5 @@
 {
-    "MONGO_URI" : "connection",
+    "MONGO_URI" : "mongodb+srv://rukundob39:RBS2021GSSA@umurava.l73hd.mongodb.net/?retryWrites=true&w=majority&appName=Umurava",
     "PORT" : "port",
     "JWTKEY" : "key"
   }
