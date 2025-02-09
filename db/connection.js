@@ -13,3 +13,6 @@ export default mongoose
   })
   .then(() => console.log(`Connected Successfully Umurava DB`))
   .catch((error) => console.log(`${error} did not connect`));
+
+mongoose.set('bufferCommands', false);
+
