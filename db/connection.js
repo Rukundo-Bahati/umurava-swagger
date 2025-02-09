@@ -16,9 +16,8 @@ const connectDB = async () => {
     console.log(`Connected Successfully to Umurava DB`);
   } catch (error) {
     console.log(`Error: ${error.message}`);
-    process.exit(1); // Exit the process if connection fails
+    process.exit(1); 
   }
 };
 
-// Call the connection function
 connectDB();

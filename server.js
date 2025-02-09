@@ -1,5 +1,4 @@
 import express from 'express';
-import connection from './db/connection.js'; 
 import helmet from 'helmet';
 import cors from 'cors';
 import swaggerJSDoc from 'swagger-jsdoc';
@@ -8,7 +7,6 @@ import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import challengeRoutes from './routes/challengeRoutes.js'
 
-// Import the combined Swagger documentation
 import * as swaggerDocs from './swaggerDocs.js';
 
 const app = express();
